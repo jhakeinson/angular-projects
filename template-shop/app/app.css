@@ -1,0 +1,24 @@
+body {
+  margin-top: 65px;
+}
+
+.templates-list {
+  text-align: center;
+}
+
+.templates-list .template-item {
+  margin-bottom: 5%;
+}
+
+.templates-list img {
+  width: 70%;
+}
+
+.templates-list a {
+  width: 70%;
+  margin: auto; /* Put eleement to center */
+}
+
+.template-info img {
+  width: 100%;
+}
