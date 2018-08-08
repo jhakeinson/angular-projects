@@ -1,0 +1,3 @@
+[submodule "template-store"]
+	path = template-store
+	url = https://github.com/angular/angular-seed.git
