@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Lynn Location<",
+        "street": "333Walnut st",
+        "city": "Dummy city",
+        "state": "MA",
+        "zip": "28366",
+        "phone": "83736-3737-37"
+    },
+    {
+        "id": 2,
+        "name": "Lynn Location<",
+        "street": "333Walnut st",
+        "city": "Dummy city",
+        "state": "MA",
+        "zip": "28366",
+        "phone": "83736-3737-37"
+    },
+    {
+        "id": 3,
+        "name": "Lynn Location<",
+        "street": "333Walnut st",
+        "city": "Dummy city",
+        "state": "MA",
+        "zip": "28366",
+        "phone": "83736-3737-37"
+    }
+]

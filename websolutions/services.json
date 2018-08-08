@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Website builder",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor urna nec quam condimentum, finibus malesuada velit suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris sapien, consequat nec dictum non, venenatis non ipsum",
+        "image": "browser-web-icon.png"
+    },
+    {
+        "id": 2,
+        "name": "Web Design Expert",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor urna nec quam condimentum, finibus malesuada velit suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris sapien, consequat nec dictum non, venenatis non ipsum",
+        "image": "browser-web-icon.png"
+    },
+    {
+        "id": 3,
+        "name": "Web Security",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor urna nec quam condimentum, finibus malesuada velit suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris sapien, consequat nec dictum non, venenatis non ipsum",
+        "image": "browser-web-icon.png"
+    }
+]

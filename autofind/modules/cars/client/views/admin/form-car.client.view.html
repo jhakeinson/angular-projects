@@ -1,0 +1,147 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.car._id ? 'Edit Car' : 'Add A Car'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.car._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.carForm" class="form-horizontal" ng-submit="vm.save(vm.form.carForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">Title</label>
+          <input name="title" type="text" ng-model="vm.car.title" id="title" class="form-control" placeholder="Title" required autofocus>
+          <div ng-messages="vm.form.carForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Article title is required.</p>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="image_url">Image</label>
+          <input name="image_url" type="text" ng-model="vm.car.image_url" id="image_url" class="form-control" placeholder="e.g.: http://image.example.com/bear.png" autofocus>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="type">Type</label>
+          <div class="controls">
+            <label class="radio-inline"><input type="radio" ng-model="vm.car.type" id="type" namw="type" value="used" checked>used</label>
+            <label class="radio-inline"><input type="radio" ng-model="vm.car.type" id="type" namw="type" value="new">new</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="make">Make</label>
+          <select name="make" id="make" ng-model="vm.car.make" class="form-control">
+            <option value="0">--SELECT MAKE--</option>
+            <option value="AUDI">AUDI</option>
+            <option value="BENTLEY">BENTLEY</option>
+            <option value="BMW">BMW</option>
+            <option value="BUICK">BUICK</option>
+            <option value="CADILLAC">CADILLAC</option>
+            <option value="CHEVROLET">CHEVROLET</option>
+            <option value="CHRYSLER">CHRYSLER</option>
+            <option value="DODGE">DODGE</option>
+            <option value="FERRARI">FERRARI</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="model">Model</label>
+          <select name="model" id="model" ng-model="vm.car.model" class="form-control">
+            <option value="0">--SELECT MODEL--</option>
+            <option value="COMMANDER">COMMANDER</option>
+            <option value="COMPASS">COMPASS</option>
+            <option value="GRAND CHEROKEE">GRAND CHEROKEE</option>
+            <option value="LIBERTY">LIBERTY</option>
+            <option value="PATRIOT">PATRIOT</option>
+            <option value="WRANGLER">WRANGLER</option>
+          </select>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="year">Year</label>
+          <input name="year" type="text" ng-model="vm.car.year" id="year" class="form-control" placeholder="" autofocus>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="state">State</label>
+            <select name="state" id="state" ng-model="vm.car.state" class="form-control">
+              <option value="0">--SELECT STATE--</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District Of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+
+          <div class="form-group" show-errors>
+            <label class="control-label" for="price">Price</label>
+            <input name="price" type="text" ng-model="vm.car.price" id="price" class="form-control" placeholder="" autofocus>
+          </div>
+
+          <div class="form-group" show-errors>
+            <label class="control-label" for="contact_email">Contact E-mail</label>
+            <input name="contact_email" type="text" ng-model="vm.car.contact_email" id="contact_email" class="form-control" placeholder="">
+          </div>
+
+        <div class="form-group">
+          <label class="control-label" for="description">Description</label>
+          <textarea name="description" id="description" ng-model="vm.car.description" class="form-control" cols="20" rows="7" placeholder=""></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.car._id ? 'Update' : 'Create'}}</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

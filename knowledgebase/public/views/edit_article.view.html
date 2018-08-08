@@ -1,0 +1,23 @@
+<div ng-controller="ArticleEditCtrl">
+    <h3>Edit Article</h3>
+    <form ng-submit="updateArticle()">
+      <div class="form-group">
+        <label for="title">Title::</label>
+        <input ng-model="article.title" type="text" class="form-control" name="title" id="title">
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <select ng-model="article.category" class="form-control" name="category" id="catrgory">
+            <option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+          <label for="content">Content:</label>
+          <textarea ng-model="article.content" class="form-control" name="content" id="content"></textarea>
+        </div>
+        
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="#!/categories" class="btn btn-danger">Cancel</a>
+    </form>
+  </div>
+  

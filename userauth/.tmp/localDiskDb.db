@@ -1,0 +1,54 @@
+{
+  "data": {
+    "user": [
+      {
+        "name": "Jhake Inson",
+        "email": "jhakeinson2313@gmail.com",
+        "password": "$2a$10$zgfoKpYUx5o8h2erkpoH1ObHI4LxHDcMoJK0oInlBvxrzFaIyHLr2",
+        "lastLoggedIn": "2018-03-14T14:35:00.874Z",
+        "gravatarUrl": "https://www.gravatar.com/avatar/54125d33a45d5e3caa4880fb77945a7e?",
+        "createdAt": "2018-03-14T14:35:00.915Z",
+        "updatedAt": "2018-03-14T14:35:00.915Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "name": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "lastLoggedIn": {
+        "type": "date",
+        "defaultsTo": "2018-03-15T07:35:08.122Z"
+      },
+      "gravatarUrl": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 1
+    }
+  }
+}

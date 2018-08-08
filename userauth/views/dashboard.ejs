@@ -1,0 +1,59 @@
+<!!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+
+        <!--STYLES-->
+        <link rel="stylesheet" href="/styles/angular-toastr.min.css">
+        <link rel="stylesheet" href="/styles/app.css">
+        <link rel="stylesheet" href="/styles/foundation.min.css">
+        <link rel="stylesheet" href="/styles/importer.css">
+        <!--STYLES END-->
+    </head>
+    <body ng-app="DashMod" ng-controller="DashCtrl" ng-init="getUser()">
+            <div class="top-bar">
+                    <div class="top-bar-left">
+                      <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text">Dashboard</li>
+                      </ul>
+                    </div>
+                    <div class="top-bar-right">
+                      <ul class="menu">
+                        <li><a href="/logout" type="button" class="button">Log out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+        <!--MAIN BODY-->
+        <div class="row">
+            <h3>Dashboard</h3>
+            <div class="row">
+              <div class="large-2 columns">
+                <img ng-src="{{user.gravatarUrl}}" />
+              </div>
+              <div class="large-8 columns">
+                <ul>
+                  <li>Name: {{user.name}}</li>
+                  <li>E-mail: {{user.email}}</li>
+                  <li>Member since: {{user.createdAt}}</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <!--SCRIPTS-->
+        <script src="/js/dependencies/sails.io.js"></script>
+        <script src="/js/dependencies/jquery.js"></script>
+        <script src="/js/dependencies/angular.js"></script>
+        <script src="/js/dependencies/angular-toastr.js"></script>
+        <script src="/js/dependencies/angular-toastr.tpls.js"></script>
+        <script src="/js/dependencies/foundation.min.js"></script>
+        <script src="/js/public/signup/SignupMod.js"></script>
+        <script src="/js/public/signup/SignupCtrl.js"></script>
+        <script src="/js/public/login/LoginMod.js"></script>
+        <script src="/js/public/login/LoginCtrl.js"></script>
+        <script src="/js/private/dashboard/DashMod.js"></script>
+        <script src="/js/private/dashboard/DashCtrl.js"></script>
+        <!--SCRIPTS END-->
+    </body>
+</html>

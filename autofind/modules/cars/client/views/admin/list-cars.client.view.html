@@ -1,0 +1,26 @@
+﻿<section>
+  <div class="page-header">
+    <h1>
+      Latest Cars
+      <a class="btn btn-primary pull-right" data-ui-sref="cars.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+  <div class="list-group row">
+    <div class="col-md-3">
+      <img src="modules/core/client/img/cars/kariton.jpg">
+    </div>
+    <div class="col-md-9">
+      <h4>2013 Toyota Bulok2x</h4
+      <ul class="list-unstyled">
+        <li>MMake: Toyota</li>
+        <li>Model: Bulok2x</li>
+        <li>Price: PHP10,000</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.cars.$resolved && !vm.cars.length">
+    No cars yet, why don't you <a data-ui-sref="cars.create">create one</a>?
+  </div>
+</section>

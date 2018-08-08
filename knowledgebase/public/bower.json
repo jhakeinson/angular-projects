@@ -1,0 +1,23 @@
+{
+  "name": "knowledgebase",
+  "authors": [
+    "Coniemar Jhake Inson <coniemarjhakeinson@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.9",
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1"
+  }
+}

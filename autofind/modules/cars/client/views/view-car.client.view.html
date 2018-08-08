@@ -1,0 +1,22 @@
+<section>
+  <div class="row car">
+    <div class="col-md-4">
+      <img class="img-thumbnail" src="{{vm.car.image_url}}">
+    </div>
+    <div class="col-md-8">
+      <h4>{{vm.car.year}} {{vm.car.title}}</h4>
+      <ul>
+        <li>Make: {{vm.car.make}}</li>
+        <li>Model: {{vm.car.model}}</li>
+        <li>Year: {{vm.car.year}}</li>
+        <li>Price: ${{vm.car.price}}</li>
+      </ul>
+      <a class="btn btn-warning" href="#" ui-sref="cars.edit({ carId: vm.car._id })">Edit</a>
+      <a class="btn btn-danger" ng-click="vm.remove()">Delete</a>
+    </div>
+  </div>
+  <div>
+    <p>{{vm.car.description}}</p>
+    <a href="mailto:{{vm.car.contact_email}}" class="btn btn-primary">Contact Owner</a>
+  </div>
+</section>

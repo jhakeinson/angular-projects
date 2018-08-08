@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en" ng-app="kbApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Knowledge Base</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Knowledge Base</a>
+    </nav>
+
+    <main role="main" class="container">
+        <div ng-view></div>
+    </main><!-- /.container -->
+
+    <footer class="footer">
+        &copy; 2018 Knowledge Base App - <a href="#!/articles/add">Add article</a>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers/articles.controller.js"></script>
+    <script src="controllers/categories.controller.js"></script>
+  </body>
+</html>

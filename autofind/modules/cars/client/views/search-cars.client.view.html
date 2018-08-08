@@ -1,0 +1,21 @@
+<section>
+    <div class="page-header">
+      <h1>Search Results</h1>
+    </div>
+    <div class="row car" ng-repeat="car in vm.cars">
+      <div class="col-md-3">
+        <img class="img-thumbnail" src="{{car.image_url}}">
+      </div>
+      <div class="col-md-9">
+        <h4>{{car.title}}</h4
+        <ul class="list-unstyled">
+          <li>Make: {{car.make}}</li>
+          <li>Model: {{car.model}}</li>
+          <li>Price: ${{car.price}}</li>
+          <a href="#" ui-sref="cars.view({ carId: car._id })">View Details</a>
+        </ul>
+      </div>
+    </div>
+  
+  </section>
+  

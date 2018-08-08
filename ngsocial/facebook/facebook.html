@@ -1,0 +1,52 @@
+<div class="row" ng-controller="FacebookCtrl">
+    <div class="col-sm-4">
+      <h4>{{welcomeMessage}}</h4>
+      <div ng-if="isLoggedIn == true">
+        <a href={{userInfo.link}} target="_blank" ><img ng-src={{picture}} /></a>
+      </div>
+      <div ng-if="isLoggedIn == true">
+        <button ng-click="logout()" type="button" class="btn btn-primary">Logout</button>
+      </div>
+      <div ng-if="isLoggedIn == false">
+        <button ng-click="login()" type="button" class="btn btn-primary">Login</button>
+      </div>
+      <div class="card card-body" ng-if="isLoggedIn == true">
+        <h4>User Information</h4>
+        <ul>
+          <li>ID: {{userInfo.id}}</li>
+          <li>Firstname: {{userInfo.first_name}}</li>
+          <li>Lastname: {{userInfo.last_name}}</li>
+          <li>Email: {{userInfo.email}}</li>
+          <li>Gender: {{userInfo.gender}}</li>
+          <li>Locale: {{userInfo.locale}}</li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <div class+"card card-body" ng-if="isLoggedIn == true">
+        <h4>User permissions</h4>
+        <ul>
+          <li ng-repeat="p in permissions">{{p.permission}} - {{p.status}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <h3>Welcome to Fakebook</h3>
+      <form ng-submit="postToTimeline()" ng-if="isLoggedIn == true">
+        <div class="form-group">
+            <textarea ng-model="body" class='form-control w-75' placeholder="What's on your narrow brain?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <br><br>
+      <div ng-if="isLoggedIn == true" ng-repeat="post in posts" class="stbody">
+        <div class="stimg"> 
+              <img ng-src="{{picture}}">
+          </div> 
+          <div class="sttext"> 
+              {{post.message}}
+          <div class="sttime">{{post.updated_time}}</div> 
+          </div> 
+      </div>
+    </div>
+  </div>

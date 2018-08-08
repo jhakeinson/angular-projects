@@ -1,0 +1,20 @@
+<h3 class="heading">Categories</h3>
+<div class="row" ng-controller="CategoriesCtrl">
+    <div class="col-sm-6 category" ng-repeat="category in categories">
+        <h4>{{category.name}}</h4>
+        <p>{{category.description}}</p>
+        <a href="#!/articles/category/{{category.name}}" class="btn btn-primary">Show Articles</a>
+    </div>
+</div>
+
+<h3 class="heading">Latest Articles</h3>
+<div class="row article" ng-controller="ArticlesCtrl">
+    <div class="col-sm-12" ng-repeat="article in articles">
+        <h4>{{article.title}}</h4>
+        <p>{{article.category}}</p>
+        <a href="#!/articles/details/{{article._id}}">Read this Article</a>
+    </div>
+    <div ng-if="articles == false">
+        No articles.
+    </di>
+</div>
